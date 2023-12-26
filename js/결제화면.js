@@ -73,7 +73,7 @@ function MemberShipClick(idd) {
     if (memNumber !== null) {
         for (let i = 0; i < Data.length; i++) {
             if (idd === Data[i].MemberShip) {
-                if (memNumber === "0000") whale();
+                if (memNumber === "0000" && idd==="ZH") whale();
                 if (memNumber === Data[i].MembershipNumber) {
                     boo=false;
                     var mypoint = Data[i].point;
