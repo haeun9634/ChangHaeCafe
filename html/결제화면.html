@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <link href="../css/결제.css" rel="stylesheet">
+    <link rel="icon" href="../img/로고.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>결제 화면</title>
+    <style>
+        #step1,#step2{
+            position: absolute;
+            left: 30px;
+            font-size: 34px;
+            font-weight: 700;
+            text-align: left;
+        }
+        #step1{
+            top:180px;
+        }
+        #step2{
+            top:500px;
+        }
+        .step1_image,.step2_image{
+            display:flex;
+            position: relative;
+            flex-wrap: wrap;
+            /*줄바꿈*/
+            flex-direction: row;
+            justify-content: space-evenly;
+            /*동일한 크기로*/
+            align-content: flex-start;
+            text-align: center;
+        }
+        #Pay{ /*결제금액 안내*/
+            position: absolute;
+            bottom:0px;
+            font-size: 42px;
+            text-align: left;
+            width:997px;
+            height:460px;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            /*border radius로 밑에는 둥글게 설정*/
+            border-color: rgb(111, 133, 246);
+            background-color: rgb(236, 239, 247);
+            border-style: solid;
+            border-left: 5px;
+            border-right: 5px;
+            /*위아래, 코드 기준으로 left right에만 선 설정*/
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <!--header-->
+        <div class="header">
+            <h1 style="line-height:70%;">
+                <img src="../img/로고.png" id="logo"
+                width="120px" height="120px"> 청해(靑海) 결제하기</h1>
+                
+            <input type="date" value="2023-11-27">
+            <input type="time" value="13:13:13">
+            <audio src="../img/Blurry Vision - Corbyn Kites.mp3" controls loop></audio>
+        
+        </div>
+
+        <!--Content-->
+        <div class="main">
+            <div id="step1">
+                1. 포인트 적립/사용, 제휴 할인을 선택해주세요.<br>
+                <br>
+                <div class="step1_image">
+                    <div id="KT" onclick=MemberShipClick(id)> <img src="../img/KT.JPG" alt="KT멤버쉽적립" width="270px" height="120px"> <br> KT 멤버쉽</div>
+                    <div id="SKT" onclick=MemberShipClick(id)> <img src="../img/SKT.JPG" alt="SKT멤버쉽적립" width="270px" height="120px">  <br> T멤버쉽 </div>
+                    <div id="ZH" onclick=MemberShipClick(id)>  <img src="../img/ZHpoint.JPG" alt="Zhpoint적립" width="270px" height="120px"> <br> Zh포인트</div>
+                </div>
+            </div>
+            <br><br>
+            <div id="step2">
+                2. 결제 방식을 선택해주세요.<br>
+                <br>
+                <div class="step2_image">
+                    <div id="CreditCard" onclick=Payment(id)> <img src="../img/신용카드.JPG" alt="카드결제" width="270px" height="140px"> <br> 신용카드/삼성페이 </div>
+                    <div id="GiftCard" onclick=Payment(id)> <img src="../img/바코드.JPG" alt="모바일교환권" width="270px" height="140px">  <br> 모바일교환권/쿠폰 </div>
+                    <div id="NaverPay" onclick=Payment(id)>  <img src="../img/네이버페이.JPG" alt="네이버페이" width="270px" height="140px"> <br> 네이버페이</div>
+                    <div id="KakaoPay" onclick=Payment(id)> <img src="../img/카카오페이.JPG" alt="카카오페이" width="270px" height="140px"> <br> 카카오페이 </div>
+                    <div id="ZhPay" onclick=Payment(id)> <img src="../img/ZHpay.JPG" alt="ZHpay" width="270px" height="140px"> <br> Zh페이 </div>
+                </div>
+            </div>
+        </div>
+
+        <!--결제 가격-->
+        <div id="Pay">
+            <br>
+            <div class="count">
+                　　<b>총 개수</b>　　　　　 <b>3</b> 개 </div>
+            <div class="total">
+                　<b>총 주문 금액</b>　　　19500 \</div>
+            <div class="discount">
+                　<b>총 할인 금액</b>　　　-2000 \</div>
+            <br>
+            <div class="final">　<b>최종결제금액　　<font size="50px" color="red">17500원</font></b> </div>
+        </div>
+
+        <!-- 결제 하기 및 이전으로 돌아가기 버튼-->
+        <div class="footer">
+            <img src="../img/고래그림1.png" alt="고래 그림" id="whale">
+            <a href="../html/시그니처메뉴판.html">
+            <div id="cancel">
+                <b>결제취소</b>
+            </div>
+            </a>
+            
+        </div>
+
+    </div>
+
+    <script src="../js/시간.js"></script>
+    <script src="../js/결제화면.js"></script>
+
+</body>
+</html>

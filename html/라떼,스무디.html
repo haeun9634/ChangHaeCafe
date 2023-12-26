@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <link href="../css/메뉴판.css" rel="stylesheet">
+    <link rel="icon" href="../img/로고.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>청해 메뉴판</title>
+    <style>
+        .whale3{/*선택된 화면의 고래*/
+            position:absolute;
+            top:-15px;
+            left:630px;
+        }
+        #Lattemenu,#Smoothiemenu{
+            display:flex;
+            position: relative;
+            top:345px;
+            left:45px;
+            text-align:center;
+        }
+        .Latte, .Smoothie{
+            width:300px;
+            height:250px;
+            font-size: 25px;
+            font-weight: 100;
+        }
+        .Latte:hover, .Smoothie:hover{
+            color:rgb(246, 78, 78);
+            cursor: pointer;
+        }
+        h2,#Smoothie{
+            position: absolute;
+            left:40px;
+            font-size: 45px;
+        }
+        h2{/*라떼 글씨*/
+            top:300px;
+        }
+        #Smoothie{
+            top:680px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="content">
+        <!--header-->
+        <div class="header">
+            <h1 style="line-height:50%;">
+                <img src="../img/로고.png" id="logo"
+                width="100px" height="100px"> 청해(靑海) </h1>
+            
+            <input type="date" value="2023-11-27">
+            <input type="time" value="13:13:13">
+            <audio src="../img/Blurry Vision - Corbyn Kites.mp3" controls loop></audio>
+        </div>
+        
+        <!-- 클릭하면 각 카테고리로 넘어가도록 설정 -->
+        <div class="category">
+            <ul>
+                <li><a href="../html/시그니처메뉴판.html"> <img src="../img/고래그림1.png" alt="Signature/SET로 넘어가는 버튼" class="whale1"
+                    width="100px" height="100px"> </li><li id="Signatrue">Signatrue/SET</li></a>
+                
+                
+                <li> <a href="../html/커피메뉴판.html"><img src="../img/고래그림1.png" alt="Coffee로 넘어가는 버튼" class="whale2"
+                    width="100px" height="100px"> </li><li id="Coffee">Coffee</li></a>
+                
+                
+                <li> <a href="../html/라떼,스무디.html"><img src="../img/고래그림3.png" alt="현재 선택된 화면" class="whale3"
+                    width="120px" height="120px"> </li><li id="Latte"><font color='red'>Latte/Smoothie</font></li></a>
+                    <!--현재 선택된 화면-->
+
+            </ul>
+            <ul>
+                <li> <a href="../html/프라페,에이드.html"><img src="../img/고래그림1.png" alt="Frappe/Ade로 넘어가는 버튼" class="whale4"
+                    width="100px" height="100px"> </li> <li id="Frappe">Frappe/Ade</li></a>
+    
+                    
+                    <li> <a href="../html/티.html"><img src="../img/고래그림1.png" alt="Tea로 넘어가는 버튼" class="whale5"
+                        width="100px" height="100px"> </li> <li id="Tea">Tea</li></a>
+                    
+                    <li> <a href="../html/디저트.html"><img src="../img/고래그림1.png" alt="Dessert로 넘어가는 버튼" class="whale6"
+                        width="100px" height="100px"> </li> <li id="Dessert">Dessert</li></a></li>
+                    
+            </ul>
+        </div><!--카테고리 끝 -->
+
+        <!--content/menu-->
+        <div id="menu">
+            <br> <br>
+            <h2>Latte</h2>
+            <br>
+            <div id="Lattemenu">
+                <div class="Latte" id="Chocolatte" onclick=MenuClick(id)><img src="../img/초코라떼.png" alt="초코라떼" width="250px" height="270px">
+                    <br><b>초코라떼</b>  <font color="red">5.0</font> / <font color="blue">5.5</font></div>
+                <div class="Latte" id="Matchalatte" onclick=MenuClick(id)><img src="../img/말차라떼.png" alt="말차라떼" width="250px" height="270px">
+                    <br><b>말차라떼</b> <font color="red">5.0</font> / <font color="blue">5.5</font></div>
+                <div class="Latte" id="Oceanlatte" onclick=MenuClick(id)><img src="../img/바다라떼.png" alt="바다라떼" width="250px" height="270px">
+                    <br><b>바다라떼</b> <font color="red">5.0</font> / <font color="blue">5.5</font></div>
+            </div>
+            <br> <br> <br> <br>
+            <h2 id="Smoothie">Smoothie</h2>
+            <br> <br>
+            <div id="Smoothiemenu">
+                <div class="Smoothie" id="StrawberrySmoothie" onclick=MenuClick(id)><img src="../img/딸기스무디.png" alt="딸기 스무디" width="250px" height="270px">
+                    <br><b>딸기 스무디</b> 5.0</div>
+                <div class="Smoothie" id="BlueberrySmoothie" onclick=MenuClick(id)><img src="../img/블루베리스무디.png" alt="블루베리 스무디" width="250px" height="270px">
+                    <br><b>블루베리 스무디</b> 5.0 </div>
+                <div class="Smoothie" id="PeachSmoothie" onclick=MenuClick(id)><img src="../img/복숭아스무디.png" alt="복숭아 스무디" width="250px" height="270px">
+                    <br><b>복숭아 스무디</b> 5.0 </div>
+            </div>
+        </div>
+
+        <!--footer-->
+        <a href="../html/index.html">
+        <img src="../img/홈버튼.png" alt="홈으로 돌아가는 버튼" width="100px" height="100px" id="home">
+        </a>
+
+         <!--현재 금액 -->
+         <h3 id="money">금액: <span id="price">0원</span></h3>
+         <h3 id="cancel" onclick=totalcancel()>전체 취소</h3>
+         <!--결제 화면으로 넘어가기-->
+         <a href="../html/결제화면.html">
+         <h3>결제하기</h3>
+         </a>
+         
+         <!--선택 메뉴-->
+         <h4>　선택 메뉴　</h4>
+         <div class="select">
+             <div class="selectmenu"></div>
+             <div class="totalnum"><br>총개수 <b>0</b>개</div>
+             
+             <!--선택 메뉴 공간-->
+         </div>
+        
+        <!--회사 로고-->
+        <div id="office">　©zHeritage</div>
+    </div>
+
+    <script src="../js/시간.js"></script>
+    <script src="../js/라떼,스무디메뉴.js"></script>
+
+</body>
+</html>
