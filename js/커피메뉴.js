@@ -633,7 +633,7 @@ function printColdCafeMocha() {
     }
     else if (ccm != 0) {
         let CafeMocha = document.querySelector(".CafeMochaI");
-        if (CafeMochaI !== undefined && CafeMochaI !== null) {
+        if (CafeMocha !== undefined && CafeMocha !== null) {
             if (ccm < 10) {
                 CafeMocha.innerHTML = `${ccmrow}. 카페모카(I)　　 　　　 5.5 　 ${ccm}개　
             <button onclick=rowremove("CafeMochaI","ccm",${ccmrow})> <img src="../img/고래그림1.png" width="30px" hegiht="65px"> </button>`;
