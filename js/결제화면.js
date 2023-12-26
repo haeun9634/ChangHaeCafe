@@ -9,7 +9,7 @@ let Data = [
         point: 5000
     },
     {
-        MemberShip: "KT", MembershipNumber: "01072992311",
+        MemberShip: "ZH", MembershipNumber: "01072992311",
         point: 1000000000
     },
     {
@@ -24,6 +24,18 @@ let Data = [
     {
         MemberShip: "ZH", MembershipNumber: "0000",
         point: 103482530285723184025823412853030432
+    },
+    {
+        MemberShip: "KT", MembershipNumber : "01025622485",
+        point: 99999999
+    },
+    {
+        MemberShip: "KT", MembershipNumber:"01071747203",
+        point: 40500000
+    },
+    {
+        MemberShip: "KT", MembershipNumber: "01037989634",
+        point: 75000000
     }
 ];
 
