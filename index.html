@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <link href="../css/홈.css" rel="stylesheet">
+    <link rel="icon" href="../img/로고.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #logo{
+            position:absolute;
+            left:50px; clear:both; 
+            top:80px;
+        }
+        h1{ /*제목, 청해*/
+            font-size:120px;
+            color: rgb(68, 143, 208);
+            z-index:5;
+        }
+        .first{/* 포장/매장 선택화면 */
+            display:inline-block;
+            font-size:95px;
+            position:absolute;
+            top:900px;
+            /*
+            border-width:2px;
+            border-style:solid;
+            border-color:white;
+            */
+            color:rgb(237, 236, 236);
+            width:450px;
+            height:300px;
+            border-radius:50px;
+        }
+        .first:hover{
+            color:rgb(246, 78, 78);
+            text-shadow: 2px 2px white;
+            cursor:pointer;
+        }
+        #content>a{/*글자 색 지정*/
+            color:white;
+        }
+        
+    </style>
+    <title>청해 카페 메인화면</title>
+</head>
+<body>
+
+    <div id="content">
+        <div id="border">
+            <br> <br>
+            <!--헤더-->
+            <h1 style="line-height:50%;">
+                <img src="../img/로고.png" id="logo"
+                width="150px" height="150px">청해 
+                <font size="50px" style="color:rgb(30, 53, 155);
+                position: absolute; top:60px;">靑海</font> </h1>
+
+            <div id="time">
+            <input type="date" value="" id="dated">
+            <input type="time" value="" id="classed">
+            </div>
+
+            <audio src="../img/Blurry Vision - Corbyn Kites.mp3" controls auto loop></audio>
+            <!-- 출처: 유튜브 오디오 라이브러리 -->
+            
+            <!--메뉴판 사진-->
+            <img src="../img/메뉴판.png" alt=""
+            class="homeimg" id="img1"
+            width="900px" height="600px" style="border-radius:25px;">
+            
+            <!-- 클릭하면 메뉴판으로 넘어가도록 설정-->
+            <a href="../html/시그니처메뉴판.html">
+            <div id="OUT" class="first">
+                <b>포장</b><br>
+                <font size="65px">Take Out </font>
+            </div>
+            <div id="IN" class="first">
+                <b>매장</b><br>
+                <font size="65px">Eat Here </font>
+            </div>
+            </a>
+            
+            <!--footer-->
+            <h3 id="Twitter">　청해(靑海) 트위터: @cheonghae​ </h3>
+            <h3 id="Instar">　인스타: @cheonghae​ </h3>
+            <h3 id="Youtube">　유튜브 주소:
+            <a href="https://www.youtube.com/watch?v=LPFyDnDq9cs" target="_blank"> 
+                https://youtu.be/cheonghae​
+            </a>
+            </h3>
+            
+            <div>
+                <h4 id="map">-- 찾아오시는 길 --<br>
+                강원도 강릉시 청해면<br>
+                버스: 31번 고래마을 하차 후 10분 도보<br>
+                지하철: 청해바다역 4번 출구</h4>
+            </div>
+
+            
+            <div id="office">　©zHeritage</div>
+        </div>
+    </div>
+    
+
+    <script src="../js/시간.js"></script>
+
+</body>
+</html>
