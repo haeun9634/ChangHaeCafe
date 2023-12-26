@@ -1,0 +1,299 @@
+body{
+    text-align: center;
+    background-image: url('../img/바다이미지.jpg');
+}
+a{
+    text-decoration: none;
+}
+/*내용 차지하는 공간*/
+#content{
+    background-color: aliceblue;
+    position:relative;
+    top:50px;
+    left:280px;
+    width:1000px;
+    height:1500px;
+    box-sizing: border-box;
+    border-radius:50px;
+}
+/*헤더 공간*/
+.header{
+    position:absolute;
+    background-color: rgb(89, 128, 242);
+    top:5px;
+    left:1px;
+    width:998px;
+    height:130px;
+    border-radius:50px;
+}
+h1{/*제목: 청해*/
+    position: absolute;
+    top:25px;
+    font-size:45px;
+    text-align: left;
+    left:100px;
+    color: white;
+    align-items: center;
+    text-shadow: 4px 4px 2px rgb(62, 14, 175);
+}
+#logo{
+    position: absolute;
+    top:-35px;
+    left:-100px;
+}
+audio{
+    position:absolute;
+    right:15px;
+    top:12px;
+    width: 210px;
+    height:25px;
+}
+input[type="date"],input[type="time"]{
+    /* 위치지정 */
+    position:absolute;
+    right:30px;
+    width:160px;
+    height:30px;
+    /* 폰트 및 배경 지정 */
+    font-size:20px;
+    color: white;
+    font-weight: bold;
+    background: none;
+    border-style:none;
+}
+input[type="date"]{
+    top:45px;
+}
+input[type="time"]{
+    top:80px;
+    width:190px;
+}
+
+/*카테고리 부분 시작 */
+.category{
+    display:flex;
+    position:absolute;
+    box-sizing: border-box;
+    top:150px;
+    font-size:30px;
+    color:rgb(100, 135, 232);
+    font-weight: bold;
+    align-items: center;
+    width:220px;
+}
+ul{
+    list-style: none;
+}
+li{
+    display: inline-block; 
+    border-color: rgb(174, 237, 255);
+    border-radius:50px;
+    background-color: rgb(205, 244, 255)
+}
+/* 카테고리 배치 */
+/*고래 위치 지정*/
+.whale1{
+    position:absolute;
+    top:-10px;
+    left:25px;
+}
+.whale2{
+    position:absolute;
+    top:-10px;
+    left:330px;
+}
+.whale3{
+    position:absolute;
+    top:-10px;
+    left:650px;
+}
+.whale4{
+    position: absolute;
+    top:70px;
+    left:25px;
+}
+.whale5{
+    position:absolute;
+    top:70px;
+    left:330px;
+}
+.whale6{
+    position:absolute;
+    top:70px;
+    left:650px;
+}
+/*글씨 위치 지정*/
+#Coffee,#Signature,#Latte,#Frappe,#Tea,#Dessert{
+    width:200px;
+}
+#Signatrue{
+    position:absolute;
+    left:120px;
+}
+#Coffee{
+    position:absolute;
+    left:425px;
+}
+#Latte{
+    position:absolute;
+    left:745px;
+}
+#Frappe{
+    position: absolute;
+    top:110px;
+    left:120px;
+}
+#Tea{
+    position: absolute;
+    top:110px;
+    left:425px;
+}
+#Dessert{
+    position: absolute;
+    top:110px;
+    left:745px;
+}
+/* 카테고리 배치끝 */
+#Coffee:hover,#Signatrue:hover,#Latte:hover,#Frappe:hover,#Tea:hover,
+#Dessert:hover,#home:hover,h3:hover,#cancel:hover,a:hover{
+    color:rgb(246, 78, 78);
+    cursor: pointer;
+}
+/*선택메뉴 */
+h4{ /*선택메뉴 글씨*/
+    position:absolute;
+    right:320px;
+    bottom:255px;
+    font-size:40px;
+    border-style: solid;
+    border-radius:50px;
+    background-color: aliceblue;
+    border-color: rgb(111, 133, 246);
+    z-index:8;/*선택메뉴 글씨가 select 영역보다 앞으로 하기 위해 설정*/
+}
+.select{
+    position: absolute;
+    bottom:55px;
+    border-style: solid;
+    right:60px;
+    width:530px;
+    height:280px;
+    overflow-y:scroll;
+    overflow-x:hidden;
+    background-color: rgb(236, 239, 247);
+    border-color: rgb(111, 133, 246);
+    z-index:2; 
+}
+.selectmenu{/*선택메뉴 안에 내용들 포괄적으로 */
+    position: absolute;
+    white-space:nowrap;
+    top:30px;
+    left:30px;
+    right:100px;
+    width:500px;
+    height:260px;
+}
+.blank{
+    height:10px;
+    border-bottom: none;
+}
+.totalnum{
+    position: absolute;
+    font-size:35px;
+    top:180px;
+    right:15px
+}
+.Signature:hover, .set:hover, 
+.Golgoreng:hover, .mtl:hover, .CoffeeDessert:hover, .Coffee2:hover, .Set2:hover, button:hover,
+.coffeemenu:hover,.Americano:hover, .Espresso:hover, .Cappuccino:hover, .CafeLatte:hover, .CafeMocha:hover, .CF:hover,
+.AmericanoI:hover, .EspressoI:hover, .CappuccinoI:hover, .CafeLatteI:hover, .CafeMochaI:hover,
+.Chocolatte:hover, .Matchalatte:hover, .Oceanlatte:hover, .StrawberrySmoothie:hover, .BlueberrySmoothie:hover, .CF:hover,
+.ChocolatteI:hover, .MatchalatteI:hover, .OceanlatteI:hover, .PeachSmoothie:hover,
+.Chamomile:hover, .GingerLemon:hover, .GrapeFruit:hover, .PepperMint:hover, .BlackMilkTea:hover,.EarlGray:hover,
+.MangoFrappe:hover, .BlueberryFrappe:hover, .PeachFrappe:hover, .LemonAde:hover, .GraoeFruitAde:hover,
+.GorengCookie:hover, .SeaPearlChocolate:hover, .WhaleMacaron:hover, 
+.WhaleSculptureCake:hover, .StrawberrywhippedcreamNutellaWaffle:hover, .BananaNutellaWaffle:hover
+{
+    color:rgb(246, 78, 78);
+    cursor: pointer;
+}
+
+
+/*선택메뉴*/
+.Golgoreng, .mtl, .CoffeeDessert, .Coffee2, .Set2,
+.Americano, .Espresso, .Cappuccino, .CafeLatte, .CafeMocha, .CF,
+.AmericanoI, .EspressoI, .CappuccinoI, .CafeLatteI, .CafeMochaI,
+.Chamomile, .GingerLemon, .GrapeFruit, .PepperMint, .BlackMilkTea, .EarlGray,
+.MangoFrappe, .BlueberryFrappe, .PeachFrappe, .LemonAde, .GraoeFruitAde,
+.Chocolatte, .Matchalatte, .Oceanlatte, .StrawberrySmoothie, .BlueberrySmoothie, .PeachSmoothie,
+.ChocolatteI, .MatchalatteI, .OceanlatteI,
+.GorengCookie, .SeaPearlChocolate, .WhaleMacaron, .WhaleSculptureCake, .StrawberrywhippedcreamNutellaWaffle, .BananaNutellaWaffle{ /* 선택메뉴 안에 내용*/
+    /* 선택메뉴 안에 내용*/
+    display:flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-content: flex-start;
+    flex-wrap: nowrap;
+    position: relative;
+    font-size:25px;
+    width:510px;
+    height:40px;
+    text-align:left;
+    /*border: solid 2px black;*/
+    border-bottom: solid 2px black;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*홈버튼*/
+#home{
+    position:absolute;
+    bottom:60px;
+    left:20px;
+}
+/*주문 금액*/
+#money{
+    position: absolute;
+    bottom:260px;
+    left:80px;
+    background-color: aliceblue;
+    color:black;
+    font-size:40px;
+    width:330px;
+}
+/*전체 취소*/
+#cancel{
+    position:absolute;
+    color:black;
+    background-color: white;
+    border-style: solid;
+    border-color: rgb(76, 132, 229);
+    bottom:170px;
+    font-size:43px;
+    width:280px;
+}
+/*결제하기*/
+h3{
+    position:absolute;
+    bottom:80px;
+    left:100px;
+    font-size:50px;
+    width:300px;
+    color:white;
+    background-color: rgb(76, 132, 229);
+    border-radius:50px;
+}
+#office{/*회사 로고*/
+    position: absolute;
+    text-align: right;
+    right:20px;
+    bottom:25px;
+}

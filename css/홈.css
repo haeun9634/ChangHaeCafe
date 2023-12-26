@@ -1,0 +1,80 @@
+body{
+    text-align: center;
+    background-image: url('../img/바다이미지.jpg');
+}
+a{
+    text-decoration: none;
+}
+#content{
+    background-color: aliceblue;
+    position:relative;
+    top:50px;
+    left:280px;
+    width:1000px;
+    height:1500px;
+    box-sizing: border-box;
+    border-radius:50px;
+}
+input[type="date"],input[type="time"]{
+    position:absolute;
+    right:30px;
+    width:160px;
+    height:30px;
+    font-size:20px;
+    color:rgb(88, 108, 234);
+    font-weight: bold;
+    background: none;
+    border-style:none;
+}
+input[type="date"]{
+    top:130px;
+}
+input[type="time"]{
+    top:170px;
+    width:190px;
+}
+audio{
+    position:absolute;
+    right:10px;
+    top:20px;
+    width:300px;
+}
+/*헤더 끝*/
+#OUT{/*포장*/
+    left:25px;
+    background-color: rgb(100, 150, 240);
+}
+#IN{/*매장*/
+    left:515px;
+    background-color: rgb(114, 132, 219);
+}
+#map{/*찾아오는 길*/
+    position: absolute;
+    right:50px;
+    width:370px;
+    bottom:90px;
+}
+h3{/*청해 트위터, 인스타, 유튜브 위치 지정*/
+    position:absolute;
+}
+#Twitter{
+    bottom: 180px;
+}
+#Instar{
+    bottom: 140px;
+}
+#Youtube{
+    bottom: 100px;
+}
+h4{/*찾아오시는 길*/
+    position: absolute;
+    text-align: right;
+    bottom:25px;
+    font-size: 20px;
+}
+#office{/*회사 로고*/
+    position: absolute;
+    text-align: right;
+    right:20px;
+    bottom:25px;
+}

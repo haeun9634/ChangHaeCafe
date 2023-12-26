@@ -1,0 +1,107 @@
+body{
+    text-align: center;
+    background-image: url('../img/바다이미지.jpg');
+}
+a{
+    text-decoration: none;
+}
+/*내용 차지하는 공간*/
+#content{
+    background-color: aliceblue;
+    position:relative;
+    top:50px;
+    left:280px;
+    width:1000px;
+    height:1500px;
+    box-sizing: border-box;
+    border-radius:50px;
+}
+.header{/*헤더공간*/
+    position: absolute;
+    top:5px;
+    left:1px;
+    width:998px;
+    height:130px;
+    background-color: rgb(89, 128, 242);
+    border-radius:75px;
+}
+h1{/*제목: 청해 결제하기*/
+    position: absolute;
+    top:-63px;
+    font-size:45px;
+    text-align: left;
+    left:15px;
+    color:rgb(255, 255, 255);
+    text-shadow: 4px 4px 2px rgb(62, 14, 175);
+}
+#logo{/*로고 사진 위치 지정*/
+    position: relative;
+    left:0px;
+    top:40px;
+}
+audio{
+    position:absolute;
+    right:15px;
+    top:12px;
+    width: 210px;
+    height:25px;
+}
+input[type="date"],input[type="time"]{
+    position:absolute;
+    right:40px;
+    width:160px;
+    height:30px;
+    font-size:20px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    background: none;
+    top:45px;
+    border-style:none;
+}
+input[type="date"]{
+    top:45px;
+}
+input[type="time"]{
+    top:80px;
+}
+/*main content 내용*/
+
+#KT,#SKT,#ZH,#NaverPay,#KakaoPay,#ZhPay{
+    width: 320px;
+    height: 230px;
+}
+#CreditCard,#GiftCard{
+    width: 400px;
+    height:230px;
+}
+#KT:hover,#SKT:hover,#ZH:hover,#NaverPay:hover,
+#KakaoPay:hover,#ZhPay:hover,#CreditCard:hover,
+#GiftCard:hover,#cancel:hover{
+    color:rgb(246, 78, 78);
+    cursor: pointer;
+}
+ /*결제하기, 취소하기*/
+ #cancel,#whale{
+    /* 위치 설정 */
+    position:absolute;
+    width:320px;
+    font-size:60px;
+    border-radius:50px;
+    right:60px; 
+ }
+#cancel{
+    /* 색깔 지정 */
+    color:black;
+    background-color: white;
+    border-style: solid;
+    border-color: rgb(76, 132, 229);      
+    bottom:130px;
+}
+#whale{/*고래 그림*/
+    color:white;
+    bottom:180px;
+}
+#whale:hover{
+    background-image: url('../img/고래그림3.png');
+    /*마우스를 가져다대면 뒤에 고래가 생기도록 설정, 그 외 기능 없음*/
+}
