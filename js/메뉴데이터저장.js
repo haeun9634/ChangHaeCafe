@@ -1319,3 +1319,11 @@ if (saveedMenu != null) {
 
 }
 
+function payclick(){
+    let money = localStorage.getItem("price");
+    if(money !== "0")
+        window.location.href = "../html/결제화면.html";
+    else
+        alert("현재 선택된 메뉴가 없습니다. 메뉴를 선택해주세요.");
+}
+
