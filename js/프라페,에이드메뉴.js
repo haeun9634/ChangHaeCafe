@@ -1,32 +1,32 @@
 
-document.write('<script src="../js/시그니처.js"> </script>');
-var scripts = document.querySelectorAll('script[src="../js/시그니처.js"]');
+
+document.write('<script src="../js/메뉴데이터저장.js"> </script>');
+var scripts = document.querySelectorAll('script[src="../js/메뉴데이터저장.js"]');
 if (scripts.length > 1) {
     scripts[1].parentNode.removeChild(scripts[1]);
 }
-
 
 function FrappeClick(idd){
     let now=document.querySelector(`#${idd}`);
     switch(idd){
         case "MangoFrappe":
-            mf++,n++;//각개수, 총개수 늘리기
+            mf++;
             printMangoFrappe();
             break;
         case "BlueberryFrappe":
-            bf++,n++;//각개수, 총개수 늘리기
+            bf++;
             printBlueberryFrappe();
             break;
         case "PeachFrappe":
-            pf++; n++;
+            pf++; 
             printPeachFrappe();
             break;
         case "LemonAde":
-            la++; n++;
+            la++; 
             printLemonAde();
             break;
         case "GraoeFruitAde":
-            gfa++; n++;
+            gfa++; 
             printGraoeFruitAde();
             break;
     }
@@ -35,154 +35,6 @@ function FrappeClick(idd){
     totalnum();
     savemenu();
 }
-
-// function makePrice(){//가격 정하기
-//     Price2=5000*Number(mf)+5000*Number(bf)+5000*Number(pf)+5000*Number(la)+5000*Number(gfa);
-//     Price.innerHTML=`${Price2}원`;
-// }
-
-// function totalnum(){
-//     let tn=document.querySelector(".totalnum");
-//     tn.innerHTML=`<br>총개수 <b>${n}</b>개`;
-//     tn.style.top='180px';
-//        //totalnum을 마지막 요소의 아래로 이동
-//     if (row >= 5) {
-//         let blankElements = document.querySelectorAll(".blank");
-//         let lastBlank = blankElements[blankElements.length - 1];
-//         tn.style.top = lastBlank.offsetTop + lastBlank.offsetHeight + 'px';; // 10은 여백
-//     }
-// }
-
-// let now=5;
-// function blank(neww){
-//     if(now<neww){//이전값보다 크다면 blank삭제
-//         now=neww;
-//         let blank=document.querySelector(".blank");
-//         selectmenu.removeChild(blank);
-//     }
-//     let text=document.createElement("div");
-//     text.innerHTML=`<br>`
-//     text.setAttribute("class","blank");
-//     selectmenu.appendChild(text);
-// }
-
-// function SelectClick(classs,num){
-//     let nowcalpf=document.querySelector(`.${classs}`);
-//     switch(num){
-//         case "mf":
-//             mf--;
-//             break;
-//         case "bf":
-//             bf--;
-//             break;
-//         case "pf":
-//             pf--;
-//             break;
-//         case "la":
-//             la--;
-//             break;
-//         case "gfa":
-//             gfa--;
-//             break;
-//     }
-
-//     n--;//총개수 삭제
-
-//     if(mf<=0 && mfrow!=0) rowremove("MangoFrappe","mf",mfrow);
-//     if(bf<=0 && bfrow!=0) rowremove("BlueberryFrappe","bf",bfrow);
-//     if(pf<=0 && pfrow!=0) rowremove("PeachFrappe","pf",pfrow);
-//     if(la<=0 && larow!=0) rowremove("LemonAde","la",larow);
-//     if(gfa<=0 && gfarow!=0) rowremove("GraoeFruitAde","gfa",gfarow);
-
-//     totalprint();
-// }
-
-// function rowremove(classs,num,rownum){
-//     let nowclass=document.querySelector(`.${classs}`);
-//     switch(num){
-//         case "mf":
-//             n-=Number(mf);
-//             mf=0; mfrow=0; 
-//             break;
-//         case "bf":
-//             n-=Number(bf);
-//             bf=0; bfrow=0; 
-//             break;
-//         case "pf":
-//             n-=Number(pf);
-//             pf=0; pfrow=0; 
-//             break;
-//         case "la":
-//             n-=Number(la);
-//             la=0; larow=0; 
-//             break;
-//         case "gfa":
-//             n-=Number(gfa);
-//             gfa=0; gfarow=0; 
-//             break;
-//     }
-
-//      /*현재 열보다 숫자가 더 크면 하나씩 줄이기*/
-//     if(mfrow>rownum) mfrow--;
-//     if(bfrow>rownum) bfrow--;
-//     if(pfrow>rownum) pfrow--;
-//     if(larow>rownum) larow--;
-//     if(gfarow>rownum) gfarow--;
-
-//     if(row==5){/*row가 5일경우 blank삭제*/
-//         let blank=document.querySelector(".blank");
-//         selectmenu.removeChild(blank);
-//         now=5
-//     }
-    
-//     row--;//전체 열 하나 줄이기
-//     selectmenu.removeChild(nowclass);
-
-//     totalprint();
-//     /*cancleBubble을 이용해 이벤트 버블링 방지*/
-//     if (window.event) {
-//         window.event.cancelBubble = true;
-//       } else {
-//         event.stopPropagation();
-//       }
-
-// }
-
-// function totalprint(){
-//     printMangoFrappe();
-//     printBlueberryFrappe();
-//     printPeachFrappe();
-//     printLemonAde();
-//     printGraoeFruitAde();
-
-//     makePrice();
-//     totalnum();
-
-// }
-
-// function totalcancel(){
-//     if(mf!=0) selectmenu.removeChild(document.querySelector(".MangoFrappe"));
-//     if(bf!=0) selectmenu.removeChild(document.querySelector(".BlueberryFrappe"));
-//     if(pf!=0) selectmenu.removeChild(document.querySelector(".PeachFrappe"));
-//     if(la!=0) selectmenu.removeChild(document.querySelector(".LemonAde"));
-//     if(gfa!=0) selectmenu.removeChild(document.querySelector(".GraoeFruitAde"));
-
-//     if(row>=5){
-//         let blank=document.querySelector(".blank");
-//         selectmenu.removeChild(blank);
-//     }
-
-//     mf=0,bf=0,pf=0,la=0,gfa=0;//각 개수
-//     n=0, row=0; //총개수, 행개수
-//     mfrow=0,bfrow=0,pfrow=0,larow=0,gfarow=0; //각 열번호
-    
-
-//     makePrice();
-//     totalnum();
-// }
-
-
-
 
 
 
