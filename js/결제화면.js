@@ -38,7 +38,7 @@ let Data = [
         point: 75000000
     },
     {
-        MemberShip: "ZH", MembershipNumber: "010012345678",
+        MemberShip: "ZH", MembershipNumber: "01012345678",
         point: 5000000000
     }
 ];
