@@ -36,6 +36,10 @@ let Data = [
     {
         MemberShip: "KT", MembershipNumber: "01037989634",
         point: 75000000
+    },
+    {
+        MemberShip: "ZH", MembershipNumber: "01000000000",
+        point: 5000000000
     }
 ];
 
