@@ -1,7 +1,6 @@
 
-document.write('<script src="../js/시그니처.js"> </script>');
-document.write('<script src="../js/커피메뉴.js"> </script>');
-var scripts = document.querySelectorAll('script[src="../js/시그니처.js"]');
+document.write('<script src="../js/메뉴데이터저장.js"> </script>');
+var scripts = document.querySelectorAll('script[src="../js/메뉴데이터저장.js"]');
 if (scripts.length > 1) {
     scripts[1].parentNode.removeChild(scripts[1]);
 }
@@ -13,40 +12,40 @@ function MenuClick(idd){
         case "Chocolatte":
             t=confirm(` <${idd}> \n 아이스는 확인을 핫은 취소를 눌러주세요.\n Press OK for Ice or Cancel for Hot.`)
             if (t){ 
-                cclatte++,n++;;
+                cclatte++;
                 printColdChocolatte();}
             else{
-                clatte++,n++;//각개수, 총개수 늘리기
+                clatte++; //각개수, 총개수 늘리기
                 printChocolatte();}
             break;
         case "Matchalatte":
             t=confirm(` <${idd}> \n 아이스는 확인을 핫은 취소를 눌러주세요.\n Press OK for Ice or Cancel for Hot.`)
             if (t){ 
-                cml++,n++;;
+                cml++;
                 printColdMatchalatte();}
             else{
-                ml++,n++;//각개수, 총개수 늘리기
+                ml++//각개수, 총개수 늘리기
                 printMatchalatte();}
             break;
         case "Oceanlatte":
             t=confirm(` <${idd}> \n 아이스는 확인을 핫은 취소를 눌러주세요.\n Press OK for Ice or Cancel for Hot.`)
             if (t){ 
-                col++,n++;;
+                col++;
                 printColdOceanlatte();}
             else{
-                ol++,n++;//각개수, 총개수 늘리기
+                ol++//각개수, 총개수 늘리기
                 printOceanlatte();}
             break;
         case "StrawberrySmoothie":
-            ss++; n++;
+            ss++; 
             printStrawberrySmoothie();
             break;
         case "BlueberrySmoothie":
-            bs++; n++;
+            bs++;
             printBlueberrySmoothie();
             break;
         case "PeachSmoothie":
-            ps++; n++;
+            ps++;
             printPeachSmoothie();
             break;
     }
@@ -55,203 +54,6 @@ function MenuClick(idd){
     totalnum();
     savemenu();
 }
-
-// function makePrice(){//가격 정하기
-//     Price2=5000*Number(clatte) + 5000*Number(ml)+5000*Number(ol)+5000*Number(ss)+5000*Number(bs)+5000*Number(ps)
-//     +5500*Number(cclatte)+5500*Number(cml)+5500*(col);
-//     Price.innerHTML=`${Price2}원`;
-// }
-
-// function totalnum(){
-//     let tn=document.querySelector(".totalnum");
-//     tn.innerHTML=`<br>총개수 <b>${n}</b>개`;
-//     tn.style.top='180px';
-//        //totalnum을 마지막 요소의 아래로 이동
-//     if (row >= 5) {
-//         let blankElements = document.querySelectorAll(".blank");
-//         let lastBlank = blankElements[blankElements.length - 1];
-//         tn.style.top = lastBlank.offsetTop + lastBlank.offsetHeight + 'px';; // 10은 여백
-//     }
-// }
-
-// let now=5;
-// function blank(neww){
-//     if(now<neww){//이전값보다 크다면 blank삭제
-//         now=neww;
-//         let blank=document.querySelector(".blank");
-//         selectmenu.removeChild(blank);
-//     }
-//     let text=document.createElement("div");
-//     text.innerHTML=`<br>`
-//     text.setAttribute("class","blank");
-//     selectmenu.appendChild(text);
-// }
-
-// function SelectClick(classs,num){
-//     let nowcalss=document.querySelector(`.${classs}`);
-//     switch(num){
-//         case "clatte":
-//             clatte--;
-//             break;
-//         case "ml":
-//             ml--;
-//             break;
-//         case "ol":
-//             ol--;
-//             break;
-//         case "cclatte":
-//             cclatte--;
-//             break;
-//         case "cml":
-//             cml--;
-//             break;
-//         case "col":
-//             col--;
-//             break;
-//         case "ss":
-//             ss--;
-//             break;
-//         case "bs":
-//             bs--;
-//             break;
-//         case "ps":
-//             ps--;
-//             break;
-//     }
-
-//     n--;//총개수 삭제
-
-//     if(clatte<=0 && clatterow!=0) rowremove("Chocolatte","clatte",clatterow);
-//     if(ml<=0 && mlrow!=0) rowremove("Matchalatte","ml",mlrow);
-//     if(ol<=0 && olrow!=0) rowremove("Oceanlatte","ol",olrow);
-//     if(cclatte<=0 && cclatterow!=0) rowremove("ChocolatteI","cclatte",cclatterow);
-//     if(cml<=0 && cmlrow!=0) rowremove("MatchalatteI","cml",cmlrow);
-//     if(col<=0 && colrow!=0) rowremove("OceanlatteI","col",colrow);
-//     if(ss<=0 && ssrow!=0) rowremove("StrawberrySmoothie","ss",ssrow);
-//     if(bs<=0 && bsrow!=0) rowremove("BlueberrySmoothie","bs",bsrow);
-//     if(ps<=0 && psrow!=0) rowremove("PeachSmoothie","ps",psrow);
-
-//     totalprint();
-// // }
-
-// function rowremove(classs,num,rownum){
-//     let nowclass=document.querySelector(`.${classs}`);
-//     switch(num){
-//         case "clatte":
-//             n-=Number(clatte);//총개수에서 삭제
-//             clatte=0; clatterow=0;//열삭제
-//             break;
-//         case "ml":
-//             n-=Number(ml);
-//             ml=0; mlrow=0; 
-//             break;
-//         case "ol":
-//             n-=Number(ol);
-//             ol=0; olrow=0; 
-//             break;
-//         case "cclatte":
-//             n-=Number(cclatte);//총개수에서 삭제
-//             cclatte=0; cclatterow=0;//열삭제
-//             break;
-//         case "cml":
-//             n-=Number(cml);
-//             cml=0; cmlrow=0; 
-//             break;
-//         case "col":
-//             n-=Number(col);
-//             col=0; colrow=0; 
-//             break;
-//         case "ss":
-//             n-=Number(ss);
-//             ss=0; ssrow=0; 
-//             break;
-//         case "bs":
-//             n-=Number(bs);
-//             bs=0; bsrow=0; 
-//             break;
-//         case "ps":
-//             n-=Number(ps);
-//             ps=0; psrow=0; 
-//             break;
-//     }
-
-//      /*현재 열보다 숫자가 더 크면 하나씩 줄이기*/
-//     if(clatterow>rownum) clatterow--;
-//     if(mlrow>rownum) mlrow--;
-//     if(olrow>rownum) olrow--;
-//     if(cclatterow>rownum) cclatterow--;
-//     if(cmlrow>rownum) cmlrow--;
-//     if(colrow>rownum) colrow--;
-//     if(ssrow>rownum) ssrow--;
-//     if(bsrow>rownum) bsrow--;
-//     if(psrow>rownum) psrow--;
-
-//     console.log(rownum);
-//     console.log("바다라떼")
-//     console.log(colrow);
-
-//     if(row==5){/*row가 5일경우 blank삭제*/
-//         let blank=document.querySelector(".blank");
-//         selectmenu.removeChild(blank);
-//         now=5
-//     }
-    
-//     row--;//전체 열 하나 줄이기
-//     selectmenu.removeChild(nowclass);
-
-//     totalprint();
-//     /*canclatteeBubble을 이용해 이벤트 버블링 방지*/
-//     if (window.event) {
-//         window.event.cancelBubble = true;
-//       } else {
-//         event.stopPropagation();
-//       }
-
-// }
-
-// function totalprint(){
-//     printChocolatte();
-//     printMatchalatte();
-//     printOceanlatte();
-//     printColdChocolatte();
-//     printColdMatchalatte();
-//     printColdOceanlatte();
-//     printStrawberrySmoothie();
-//     printBlueberrySmoothie();
-//     printPeachSmoothie();
-
-//     makePrice();
-//     totalnum();
-
-// }
-
-// function totalcancel(){
-//     if(clatte!=0) selectmenu.removeChild(document.querySelector(".Chocolatte"));
-//     if(ml!=0) selectmenu.removeChild(document.querySelector(".Matchalatte"));
-//     if(ol!=0) selectmenu.removeChild(document.querySelector(".Oceanlatte"));
-//     if(cclatte!=0) selectmenu.removeChild(document.querySelector(".ChocolatteI"));
-//     if(cml!=0) selectmenu.removeChild(document.querySelector(".MatchalatteI"));
-//     if(col!=0) selectmenu.removeChild(document.querySelector(".OceanlatteI"));
-//     if(ss!=0) selectmenu.removeChild(document.querySelector(".StrawberrySmoothie"));
-//     if(bs!=0) selectmenu.removeChild(document.querySelector(".BlueberrySmoothie"));
-//     if(ps!=0) selectmenu.removeChild(document.querySelector(".PeachSmoothie"));
-
-//     if(row>=5){
-//         let blank=document.querySelector(".blank");
-//         selectmenu.removeChild(blank);
-//     }
-
-//     clatte=0,ml=0,ol=0,ss=0,bs=0,ps=0;//각 개수
-//     cclatte=0,cml=0, col=0;//chocolatte iclatte, 각 iclatte 개수
-//     n=0, row=0; //총개수, 행개수
-//     clatterow=0,mlrow=0,olrow=0,ssrow=0,bsrow=0,psrow=0; //각 열번호
-//     cclatterow=0,cmlrow=0,colrow=0;
-
-//     makePrice();
-//     totalnum();
-// }
-
-
 
 function printChocolatte(){
     if(clatte==1 && clatterow==0 || clatteboo===true){
@@ -349,6 +151,7 @@ function printMatchalatte(){
             Matchalatte.innerHTML=`${mlrow}. 말차라떼(H)　 　 　 5.0 　${ml}개　
             <button onclick=rowremove("Matchalatte","ml",${mlrow})> <img src="../img/고래그림1.png" width="30px" hegiht="65px"> </button>`;
         }
+
     }
 }
 
