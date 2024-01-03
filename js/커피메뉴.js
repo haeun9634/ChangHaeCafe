@@ -1,6 +1,6 @@
 
-document.write('<script src="../js/시그니처.js"> </script>');
-var scripts = document.querySelectorAll('script[src="../js/시그니처.js"]');
+document.write('<script src="../js/메뉴데이터저장.js"> </script>');
+var scripts = document.querySelectorAll('script[src="../js/메뉴데이터저장.js"]');
 if (scripts.length > 1) {
     scripts[1].parentNode.removeChild(scripts[1]);
 }
@@ -13,60 +13,60 @@ function CoffeeClick(idd) {
         case "Americano":
             t = confirm(` <${idd}> \n 아이스는 확인을 핫은 취소를 눌러주세요.\n Press OK for Ice or Cancel for Hot.`)
             if (t) {
-                ca++, n++;;
+                ca++;
                 printColdAmericano();
             }
             else {
-                a++, n++;//각개수, 총개수 늘리기
+                a++//각개수, 총개수 늘리기
                 printAmericano();
             }
             break;
         case "Espresso":
             t = confirm(` <${idd}> \n 아이스는 확인을 핫은 취소를 눌러주세요.\n Press OK for Ice or Cancel for Hot.`)
             if (t) {
-                ce++, n++;;
+                ce++;
                 printColdEspresso();
             }
             else {
-                e++, n++;//각개수, 총개수 늘리기
+                e++//각개수, 총개수 늘리기
                 printEspresso();
             }
             break;
         case "Cappuccino":
             t = confirm(` <${idd}> \n 아이스는 확인을 핫은 취소를 눌러주세요.\n Press OK for Ice or Cancel for Hot.`)
             if (t) {
-                ccc++, n++;;
+                ccc++;
                 printColdCappuccino();
             }
             else {
-                cc++, n++;//각개수, 총개수 늘리기
+                cc++//각개수, 총개수 늘리기
                 printCappuccino();
             }
             break;
         case "CafeLatte":
             t = confirm(` <${idd}> \n 아이스는 확인을 핫은 취소를 눌러주세요.\n Press OK for Ice or Cancel for Hot.`)
             if (t) {
-                ccl++, n++;;
+                ccl++;
                 printColdCafeLatte();
             }
             else {
-                cl++, n++;//각개수, 총개수 늘리기
+                cl++//각개수, 총개수 늘리기
                 printCafeLatte();
             }
             break;
         case "CafeMocha":
             t = confirm(` <${idd}> \n 아이스는 확인을 핫은 취소를 눌러주세요.\n Press OK for Ice or Cancel for Hot.`)
             if (t) {
-                ccm++, n++;;
+                ccm++;
                 printColdCafeMocha();
             }
             else {
-                cm++, n++;//각개수, 총개수 늘리기
+                cm++//각개수, 총개수 늘리기
                 printCafeMocha();
             }
             break;
         case "CF":
-            cf++, n++;
+            cf++
             printCF();
             break;
     }
@@ -74,231 +74,6 @@ function CoffeeClick(idd) {
     totalnum();
     savemenu();
 }
-
-// function SelectClick(classs, num) {//클래스 이름, 개수변수, 행번호 가져옴
-//     let nowclass = document.querySelector(`.${classs}`);
-//     switch (num) {
-//         case "a":
-//             a--;
-//             break;
-//         case "ca":
-//             ca--;
-//             break;
-//         case "e":
-//             e--;
-//             break;
-//         case "ce":
-//             ce--;
-//             break;
-//         case "cc":
-//             cc--;
-//             break;
-//         case "ccc":
-//             ccc--;
-//             break;
-//         case "cl":
-//             cl--;
-//             break;
-//         case "ccl":
-//             ccl--;
-//             break;
-//         case "cm":
-//             cm--;
-//             break;
-//         case "ccm":
-//             ccm--;
-//             break;
-//         case "cf":
-//             cf--;
-//             break;
-//     }
-
-//     n--;
-
-//     if (a <= 0 && arow != 0) {//각 개수가 존재하는 경우에만 제거
-//         rowremove("Americano", "a", arow);
-//     }
-//     if (ca <= 0 && carow != 0) {//각 개수가 존재하는 경우에만 제거
-//         rowremove("AmericanoI", "ca", carow);
-//     }
-//     if (e <= 0 && erow != 0) {
-//         rowremove("Espresso", "e", erow);
-//     }
-//     if (ce <= 0 && cerow != 0) {
-//         rowremove("EspressoI", "ce", cerow);
-//     }
-//     if (cc <= 0 && ccrow != 0) {
-//         rowremove("Cappuccino", "cc", ccrow);
-//     }
-//     if (ccc <= 0 && cccrow != 0) {
-//         rowremove("CappuccinoI", "ccc", cccrow);
-//     }
-//     if (cl <= 0 && clrow != 0) {
-//         rowremove("CafeLatte", "cl", clrow);
-//     }
-//     if (ccl <= 0 && cclrow != 0) {
-//         rowremove("CafeLatteI", "ccl", cclrow);
-//     }
-//     if (cm <= 0 && cmrow != 0) {
-//         rowremove("CafeMocha", "cm", cmrow)
-//     }
-//     if (ccm <= 0 && ccmrow != 0) {
-//         rowremove("CafeMochaI", "ccm", ccmrow)
-//     }
-//     if (cf <= 0 && cfrow != 0) {
-//         rowremove("CF", "cf", cfrow)
-//     }
-
-//     totalprint();
-
-// }
-
-// function rowremove(classs, num, rownum) {//클래스 이름, 개수, 행번호 가져옴\
-//     let nowclass = document.querySelector(`.${classs}`);
-//     switch (num) {
-//         case "a":
-//             n -= Number(a);
-//             a = 0; arow = 0;
-//             break;
-//         case "ca":
-//             n -= Number(ca);
-//             ca = 0; carow = 0;
-//             break;
-//         case "e":
-//             n -= Number(e);
-//             e = 0; erow = 0;
-//             break;
-//         case "ce":
-//             n -= Number(ce);
-//             ce = 0; cerow = 0;
-//             break;
-//         case "cc":
-//             n -= Number(cc);
-//             cc = 0; ccrow = 0;
-//             break;
-//         case "ccc":
-//             n -= Number(ccc);
-//             ccc = 0; cccrow = 0;
-//             break;
-//         case "cl":
-//             n -= Number(cl);
-//             cl = 0; clrow = 0;
-//             break;
-//         case "ccl":
-//             n -= Number(ccl);
-//             ccl = 0; cclrow = 0;
-//             break;
-//         case "cm":
-//             n -= Number(cm);
-//             cm = 0; cmrow = 0;
-//             break;
-//         case "ccm":
-//             n -= Number(ccm);
-//             ccm = 0; ccmrow = 0;
-//             break;
-//         case "cf":
-//             n -= Number(cf);
-//             cf = 0; cfrow = 0;
-//             break;
-//     }
-
-//     /*현재 열보다 숫자가 더 크면 하나씩 줄이기*/
-//     if (arow > rownum) arow--;
-//     if (erow > rownum) erow--;
-//     if (ccrow > rownum) ccrow--;
-//     if (clrow > rownum) clrow--;
-//     if (cmrow > rownum) cmrow--;
-//     if (cfrow > rownum) cfrow--;
-
-//     if (carow > rownum) carow--;
-//     if (cerow > rownum) cerow--;
-//     if (cccrow > rownum) cccrow--;
-//     if (cclrow > rownum) cclrow--;
-//     if (ccmrow > rownum) ccmrow--;
-
-
-//     if (row == 5) {/*row가 5일경우 blank삭제*/
-//         let blank = document.querySelector(".blank");
-//         selectmenu.removeChild(blank);
-//         noww = 5
-//     }
-
-//     row--;//전체 열 하나 줄이기
-//     selectmenu.removeChild(nowclass);
-
-//     totalprint();
-//     /*cancleBubble을 이용해 이벤트 버블링 방지*/
-//     if (window.event) {
-//         window.event.cancelBubble = true;
-//     } else {
-//         event.stopPropagation();
-//     }
-
-// }
-
-
-// function totalcancel() {//전체 취소 버튼을 누른 경우
-//     if (a != 0) {//각 개수가 존재하는 경우에만 제거
-//         let Americano = document.querySelector(".Americano");
-//         selectmenu.removeChild(Americano);
-//     }
-//     if (ca != 0) {//각 개수가 존재하는 경우에만 제거
-//         let AmericanoI = document.querySelector(".AmericanoI");
-//         selectmenu.removeChild(AmericanoI);
-//     }
-//     if (e != 0) {
-//         let Espresso = document.querySelector(".Espresso");
-//         selectmenu.removeChild(Espresso);
-//     }
-//     if (ce != 0) {
-//         let EspressoI = document.querySelector(".EspressoI");
-//         selectmenu.removeChild(EspressoI);
-//     }
-//     if (cc != 0) {
-//         let Cappuccino = document.querySelector(".Cappuccino");
-//         selectmenu.removeChild(Cappuccino);
-//     }
-//     if (ccc != 0) {
-//         let CappuccinoI = document.querySelector(".CappuccinoI");
-//         selectmenu.removeChild(CappuccinoI);
-//     }
-//     if (cl != 0) {
-//         let CafeLatte = document.querySelector(".CafeLatte");
-//         selectmenu.removeChild(CafeLatte);
-//     }
-//     if (ccl != 0) {
-//         let CafeLatteI = document.querySelector(".CafeLatteI");
-//         selectmenu.removeChild(CafeLatteI);
-//     }
-//     if (cm != 0) {
-//         let CafeMocha = document.querySelector(".CafeMocha");
-//         selectmenu.removeChild(CafeMocha);
-//     }
-//     if (ccm != 0) {
-//         let CafeMochaI = document.querySelector(".CafeMochaI");
-//         selectmenu.removeChild(CafeMochaI);
-//     }
-//     if (cf != 0) {
-//         let CF = document.querySelector(".CF");
-//         selectmenu.removeChild(CF);
-//     }
-
-//     if (row >= 5) {
-//         let blank = document.querySelector(".blank");
-//         selectmenu.removeChild(blank);
-//     }
-//     a = 0, e = 0, cc = 0, cl = 0, cm = 0, cf = 0;//각 개수
-//     ca = 0, ce = 0, ccc = 0, ccl = 0, ccm = 0; //cold 아메리카노(H), 에스프레소(H) etc 
-//     n = 0, row = 0; //총개수, 행개수
-//     arow = 0, erow = 0, ccrow = 0, clrow = 0, cmrow = 0, cfrow = 0; //각 열번호
-//     carow = 0, cerow = 0, cccrow = 0, cclrow = 0, ccmrow = 0;
-//     //전체 초기화
-
-//     makePrice();
-//     totalnum();
-// }
-
-
 
 
 
