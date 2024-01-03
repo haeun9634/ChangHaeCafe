@@ -611,8 +611,6 @@ function makePrice() {//가격 정하기
         + 4500 * Number(cl) + 5000 * Number(ccl) + 5000 * Number(cm) + 5500 * Number(ccm) + 6000 * Number(cf)
         + 5000 * Number(clatte) + 5000 * Number(ml) + 5000 * Number(ol) + 5000 * Number(ss) + 5000 * Number(bs) + 5000 * Number(ps)
         + 5500 * Number(cclatte) + 5500 * Number(cml) + 5500 * (col)
-        + 4000 * Number(cm) + 4500 * Number(gl) + 5000 * Number(gf)
-        + 4000 * Number(pm) + 4500 * Number(bmt) + 4000 * Number(eg)
         + 5000 * Number(mf) + 5000 * Number(bf) + 5000 * Number(pf) + 5000 * Number(la) + 5000 * Number(gfa)
         + 4000 * Number(cham) + 4500 * Number(gl) + 5000 * Number(gf)
         + 4000 * Number(pm) + 4500 * Number(bmt) + 4000 * Number(eg)
