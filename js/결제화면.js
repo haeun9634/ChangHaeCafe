@@ -9,16 +9,16 @@ let Data = [
         point: 5000
     },
     {
-        MemberShip: "ZH", MembershipNumber: "01072992311",
+        MemberShip: "ZH", MembershipNumber: "01011223344",
         point: 1000000000
     },
     {
         MemberShip: "SKT",
-        MembershipNumber: "01041371217",
+        MembershipNumber: "01012345678",
         point: 1000000
     },
     {
-        MemberShip: "SKT", MembershipNumber: "01095370531",
+        MemberShip: "SKT", MembershipNumber: "01087654321",
         point: 500
     },
     {
@@ -26,19 +26,11 @@ let Data = [
         point: 103482530285723184025823412853030432
     },
     {
-        MemberShip: "KT", MembershipNumber : "01025622485",
+        MemberShip: "KT", MembershipNumber : "01011111111",
         point: 99999999
     },
     {
-        MemberShip: "KT", MembershipNumber:"01071747203",
-        point: 40500000
-    },
-    {
-        MemberShip: "KT", MembershipNumber: "01037989634",
-        point: 75000000
-    },
-    {
-        MemberShip: "ZH", MembershipNumber: "01012345678",
+        MemberShip: "ZH", MembershipNumber: "01011111234",
         point: 5000000000
     }
 ];
@@ -48,6 +40,7 @@ let totalprice = document.querySelector(".total");
 let discount = document.querySelector(".discount");
 let final = document.querySelector(".final");
 let sale = 0;
+let couponnum;
 
 count.innerHTML = `　　<b>총 개수</b>　　　　　 <b>${parseInt(TotalNum)}</b> 개 `;
 totalprice.innerHTML = ` 　<b>총 주문 금액</b>　　　${price} 원</div>`;
@@ -61,14 +54,6 @@ function makefinalPrice(num) {
     final.innerHTML = `　<b>최종결제금액　　<font size="50px" color="red">${Number(price) - Number(sale)}원</font></b> </div>`
 }
 
-const key = "whale";
-function whale() {
-    document.body.style.backgroundImage = "url('../img/고래그림1.png')";
-    while (true) {
-        n = prompt("ERROR!!!!!!!!");
-        if (n === key) break;
-    }
-}
 
 let memNumber, num;
 let t=false;
@@ -80,7 +65,7 @@ function MemberShipClick(idd) {
     while (true) {
         memNumber = prompt(`<${idd}멤버쉽> \n 바코드 리더기에 바코드를 인식하거나 회원번호(휴대폰 번호)를 입력해주십시오.`)
         if (memNumber === '')
-            alert("잘못 입력하셨습니다. 다시 입력해주십시오.");
+            alert("잘못 입W력하셨습니다. 다시 입력해주십시오.");
         else if (isNaN(Number(memNumber)))
             alert("숫자를 입력해주십시오.");
         else
@@ -89,7 +74,6 @@ function MemberShipClick(idd) {
     if (memNumber !== null) {
         for (let i = 0; i < Data.length; i++) {
             if (idd === Data[i].MemberShip) {
-                if (memNumber === "0000" && idd==="ZH") whale();
                 if (memNumber === Data[i].MembershipNumber) {
                     boo=false;
                     var mypoint = Data[i].point;
@@ -167,14 +151,16 @@ function Payment(idd) {
             break;
         case "GiftCard":
             while (true) {
-                let num = prompt("바코드 리더기에 바코드를 인식하거나 인식이 안되는 경우 쿠폰번호를 입력해주십시오. ");
-                if (num === '')
+                couponnum = prompt("바코드 리더기에 바코드를 인식하거나 인식이 안되는 경우 쿠폰번호를 입력해주십시오. ");
+                if (couponnum === '')
                     alert("잘못 입력하셨습니다. 다시 입력해주십시오.");
-                else if (isNaN(Number(num)))
+                else if (isNaN(Number(couponnum)))
                     alert("숫자를 입력해주십시오.");
                 else
                     break;
             }
+            if(couponnum !== undefined && couponnum !== null)
+                setTimeout(() => newalert(), 3000);
 
             break;
         case "NaverPay": case "KakaoPay": case "ZhPay":
