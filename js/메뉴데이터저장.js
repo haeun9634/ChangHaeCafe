@@ -547,6 +547,7 @@ function rowremove(classs, num, rownum) {//클래스 이름, 개수, 행번호 �
     }
 
 }
+
 function totalprint() {//전체출력
     //출력
     printGolgoreng();
@@ -606,6 +607,7 @@ function totalprint() {//전체출력
 }
 
 function makePrice() {//가격 정하기
+    console.log("에렐렐레레");
     price2 = 5500 * Number(s1) + 6000 * Number(s2) + 13500 * Number(set1) + 10500 * Number(set2) + 16500 * Number(set3)
         + 3000 * Number(a) + 3500 * Number(ca) + 1500 * Number(e) + 2000 * Number(ce) + 4500 * Number(cc) + 5000 * Number(ccc)
         + 4500 * Number(cl) + 5000 * Number(ccl) + 5000 * Number(cm) + 5500 * Number(ccm) + 6000 * Number(cf)
@@ -870,7 +872,7 @@ function savemenu() {
                 rrow = chamrow;
                 break;
             case "GingerLemon":
-                gnode = "gl";
+                node = "gl";
                 count = gl;
                 rrow = glrow;
                 break;
@@ -900,7 +902,6 @@ function savemenu() {
                 rrow = gcrow;
                 break;
             case "SeaPearlChocolate":
-
                 node = "spc";
                 count = spc;
                 rrow = spcrow;
@@ -1326,4 +1327,3 @@ function payclick(){
     else
         alert("현재 선택된 메뉴가 없습니다. 메뉴를 선택해주세요.");
 }
-
