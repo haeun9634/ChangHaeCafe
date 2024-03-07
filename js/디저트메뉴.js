@@ -121,7 +121,7 @@ function printWhaleMacaron(){
         }
         wmboo=false;
         let text=document.createElement("div");
-        text.innerHTML=`${wmrow}. 고래마카롱　　　　　5.0　　${wm}개　
+        text.innerHTML=`${wmrow}. 고래마카롱　　　　　3.0　　${wm}개　
         <button onclick=rowremove("WhaleMacaron","wm",${wmrow})> <img src="../img/고래그림1.png" width="30px" hbnwiht="65px"> </button>`;
         text.setAttribute("class","WhaleMacaron");
         text.setAttribute("onclick",`SelectClick("WhaleMacaron","wm")`)
@@ -131,11 +131,11 @@ function printWhaleMacaron(){
     else if(wm !=0){
         let WhaleMacaron=document.querySelector(".WhaleMacaron");
         if(wm<10){
-            WhaleMacaron.innerHTML=`${wmrow}. 고래마카롱　　　　　5.0　　${wm}개　
+            WhaleMacaron.innerHTML=`${wmrow}. 고래마카롱　　　　　3.0　　${wm}개　
             <button onclick=rowremove("WhaleMacaron","wm",${wmrow})> <img src="../img/고래그림1.png" width="30px" hbnwiht="65px"> </button>`;
         }
         else{
-            WhaleMacaron.innerHTML=`${wmrow}. 고래마카롱　　　　　5.0 　${wm}개　
+            WhaleMacaron.innerHTML=`${wmrow}. 고래마카롱　　　　　3.0 　${wm}개　
             <button onclick=rowremove("WhaleMacaron","wm",${wmrow})> <img src="../img/고래그림1.png" width="30px" hbnwiht="65px"> </button>`;
         }
     }
