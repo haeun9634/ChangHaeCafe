@@ -5,7 +5,7 @@ const price = localStorage.getItem("price");
 let Data = [
     {
         MemberShip: "SKT",
-        MembershipNumber: "01047584150",
+        MembershipNumber: "01000000000",
         point: 5000
     },
     {
